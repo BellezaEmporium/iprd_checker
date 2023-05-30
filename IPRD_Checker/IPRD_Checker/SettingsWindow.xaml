@@ -1,0 +1,295 @@
+<Window
+	x:Class="IPRD_Checker.SettingsWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+	TextElement.FontWeight="Regular"
+	TextElement.FontSize="13"
+	TextOptions.TextFormattingMode="Ideal"
+	TextOptions.TextRenderingMode="Auto"
+	Background="{DynamicResource MaterialDesignPaper}"
+	FontFamily="{DynamicResource MaterialDesignFont}"
+	ResizeMode="NoResize"
+	WindowStartupLocation="CenterScreen"
+	Title="Settings"
+	Height="466.139"
+	Width="764.573">
+	<Grid
+		Margin="10">
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="auto" />
+			<RowDefinition
+				Height="auto" />
+			<RowDefinition
+				Height="auto" />
+			<RowDefinition
+				Height="auto" />
+		</Grid.RowDefinitions>
+		<GroupBox
+			Header="User Agent"
+			Margin="20">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition
+						Width="*" />
+					<ColumnDefinition
+						Width="200" />
+				</Grid.ColumnDefinitions>
+				<TextBox
+					Name="TxtUserAgent"
+					VerticalAlignment="Center"
+					Margin="0 0 30 0" />
+				<Button
+					Name="BtnDefault"
+					Grid.Column="1"
+					Width="120"
+					Click="Btn_default_Click">
+					<Grid
+						Width="120">
+						<wpf:PackIcon xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
+							Kind="Firefox"
+							VerticalAlignment="Center" />
+						<TextBlock
+							HorizontalAlignment="Center"
+							Text="Default"
+							FontSize="15" />
+					</Grid>
+				</Button>
+			</Grid>
+		</GroupBox>
+		<GroupBox
+			Grid.Row="1"
+			Header="VLC Location"
+			Margin="20">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition
+						Width="*" />
+					<ColumnDefinition
+						Width="200" />
+				</Grid.ColumnDefinitions>
+				<TextBox
+					Name="TxtVlcLocation"
+					VerticalAlignment="Center"
+					IsEnabled="False"
+					Margin="0 0 30 0" />
+				<Button
+					Name="BtnVlcLocation"
+					Grid.Column="1"
+					Width="120"
+					Click="Btn_VLC_Location_Click">
+					<Grid
+						Width="120">
+						<PackIcon xmlns="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
+							Kind="Vlc"
+							VerticalAlignment="Center" />
+						<TextBlock
+							HorizontalAlignment="Center"
+							Text="Browse"
+							FontSize="15" />
+					</Grid>
+				</Button>
+			</Grid>
+		</GroupBox>
+		<GroupBox
+			Header="Other Settings"
+			Margin="20"
+			Grid.Row="2">
+			<Grid
+				HorizontalAlignment="Stretch">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition
+						Width="*" />
+					<ColumnDefinition
+						Width="*" />
+					<ColumnDefinition
+						Width="*" />
+					<ColumnDefinition
+						Width="*" />
+					<ColumnDefinition
+						Width="*" />
+					<ColumnDefinition
+						Width="*" />
+				</Grid.ColumnDefinitions>
+				<TextBlock
+					Text="Time-out Seconds"
+					TextAlignment="Center"
+					ToolTip="Timeout in Seconds to consider channel is offline"
+					VerticalAlignment="Center"
+					Grid.ColumnSpan="1"
+					Margin="0,7,0,6" />
+				<ComboBox
+					Name="ComboTimeout"
+					Grid.Column="1"
+					Text="Select"
+					Margin="10,0,10,1"
+					SelectedValuePath="Content"
+					HorizontalContentAlignment="Center">
+					<ComboBoxItem
+						Content="1"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="2"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="3"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="4"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="5"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="6"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="7"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="8"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="9"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="10"
+						HorizontalContentAlignment="Center" />
+				</ComboBox>
+				<TextBlock
+					Text="Number of Tries"
+					Grid.Column="2"
+					ToolTip="How many times to try before considering channel is offline"
+					TextAlignment="Center"
+					VerticalAlignment="Center"
+					Margin="0,7,0,6" />
+				<ComboBox
+					Name="ComboTries"
+					Grid.Column="3"
+					SelectedValuePath="Content"
+					Margin="10,0,10,1"
+					HorizontalContentAlignment="Center">
+					<ComboBoxItem
+						Content="1"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="2"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="3"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="4"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="5"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="6"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="7"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="8"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="9"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="10"
+						HorizontalContentAlignment="Center" />
+				</ComboBox>
+				<TextBlock
+					Text="Number of Threads"
+					Grid.Column="4"
+					ToolTip="How many times to try before considering channel is offline"
+					TextAlignment="Center"
+					VerticalAlignment="Center"
+					Margin="0,7,0,6" />
+				<ComboBox
+					Name="ComboThreads"
+					Grid.Column="5"
+					SelectedValuePath="Content"
+					Margin="10,0,10,1"
+					HorizontalContentAlignment="Center">
+					<ComboBoxItem
+						Content="1"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="2"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="3"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="4"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="5"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="6"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="7"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="8"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="9"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="10"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="11"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="12"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="13"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="14"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="15"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="16"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="17"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="18"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="19"
+						HorizontalContentAlignment="Center" />
+					<ComboBoxItem
+						Content="20"
+						HorizontalContentAlignment="Center" />
+				</ComboBox>
+			</Grid>
+		</GroupBox>
+		<Button
+			Name="BtnSaveSettings"
+			Grid.Row="3"
+			Width="200"
+			Click="Btn_save_settings_Click">
+			<Grid
+				Width="180">
+				<PackIcon xmlns="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
+					Kind="Settings"
+					VerticalAlignment="Center" />
+				<TextBlock
+					HorizontalAlignment="Center"
+					Text="Save Settings"
+					FontSize="15" />
+			</Grid>
+		</Button>
+	</Grid>
+</Window>
